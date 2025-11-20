@@ -21,18 +21,6 @@ function Projeto2({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) 
     <div className="App">
       <Helmet>
         <title>{isPortuguese ? "Projeto 2 - Ribeiro DevStudio" : "Project 2 - Ribeiro DevStudio"}</title>
-        <meta name="description" content={isPortuguese ? "Projeto 2: Aplicação web desenvolvida para F L Barbosa Engenharia. Sistema em React com arquitetura multi-página e navegação clara." : "Project 2: Web application developed for F L Barbosa Engenharia. React system with multi-page architecture and clear navigation."} />
-        <meta name="keywords" content={isPortuguese ? "projeto 2, F L Barbosa Engenharia, aplicação web, React, multi-página, desenvolvimento web, Ribeiro DevStudio" : "project 2, F L Barbosa Engenharia, web application, React, multi-page, web development, Ribeiro DevStudio"} />
-        <meta property="og:title" content={isPortuguese ? "Projeto 2 - Ribeiro DevStudio" : "Project 2 - Ribeiro DevStudio"} />
-        <meta property="og:description" content={isPortuguese ? "Aplicação Web desenvolvida para F L Barbosa Engenharia." : "Web Application developed for F L Barbosa Engenharia."} />
-        <meta property="og:image" content="/images/pagina-flb/capa-flb.png" />
-        <meta property="og:url" content="https://ribeirodevstudio.com/portfolio/projeto2" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={isPortuguese ? "Projeto 2 - Ribeiro DevStudio" : "Project 2 - Ribeiro DevStudio"} />
-        <meta name="twitter:description" content={isPortuguese ? "Aplicação Web desenvolvida para F L Barbosa Engenharia." : "Web Application developed for F L Barbosa Engenharia."} />
-        <meta name="twitter:image" content="/images/pagina-flb/capa-flb.png" />
-        <link rel="canonical" href="https://ribeirodevstudio.com/portfolio/projeto2" />
       </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner images="/images/ti-portfolio.jpg" alt="imagem TI" title={isPortuguese ? "Projeto 2" : "Project 2"} subtitle={isPortuguese ? "Aplicação Web." : "Details of the second project."} />

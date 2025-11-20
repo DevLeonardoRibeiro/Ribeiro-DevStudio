@@ -22,19 +22,7 @@ function Sobre({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) {
   return (
     <div className="App">
       <Helmet>
-        <title>{isPortuguese ? "Sobre Nós - Ribeiro DevStudio" : "About Us - Ribeiro DevStudio"}</title>
-        <meta name="description" content={isPortuguese ? "Conheça a Ribeiro DevStudio, empresa de desenvolvimento web fundada por Leonardo Oliveira Ribeiro. Especialista em React, Node.js e soluções digitais personalizadas." : "Meet Ribeiro DevStudio, a web development company founded by Leonardo Oliveira Ribeiro. Expert in React, Node.js and custom digital solutions."} />
-        <meta name="keywords" content={isPortuguese ? "Ribeiro DevStudio, Leonardo Oliveira Ribeiro, desenvolvimento web, React, Node.js, soluções digitais, engenharia civil" : "Ribeiro DevStudio, Leonardo Oliveira Ribeiro, web development, React, Node.js, digital solutions, civil engineering"} />
-        <meta property="og:title" content={isPortuguese ? "Sobre Nós - Ribeiro DevStudio" : "About Us - Ribeiro DevStudio"} />
-        <meta property="og:description" content={isPortuguese ? "Conheça nossa história e expertise em desenvolvimento web e software." : "Learn our story and expertise in web development and software."} />
-        <meta property="og:image" content="/images/code-sobre.jpg" />
-        <meta property="og:url" content="https://ribeirodevstudio.com/sobre" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={isPortuguese ? "Sobre Nós - Ribeiro DevStudio" : "About Us - Ribeiro DevStudio"} />
-        <meta name="twitter:description" content={isPortuguese ? "Conheça nossa história e expertise em desenvolvimento web e software." : "Learn our story and expertise in web development and software."} />
-        <meta name="twitter:image" content="/images/code-sobre.jpg" />
-        <link rel="canonical" href="https://ribeirodevstudio.com/sobre" />
+        <title>{isPortuguese ? "Sobre Nós - Ribeiro DevStudio" : "About - Ribeiro DevStudio"}</title>
       </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner images="/images/code-sobre.jpg" alt="Imagem de um codigo" title={isPortuguese ? "Sobre Nós" : "About Us"} subtitle={isPortuguese ? "Conheça nossa história." : "Learn our story."} />

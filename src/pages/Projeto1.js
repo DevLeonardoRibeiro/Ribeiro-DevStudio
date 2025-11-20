@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import Breadcrumb from '../components/Breadcrumb';
 import ProjectBanner from '../components/ProjectBanner';
 import '../App.css';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 function Projeto1({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) {
   useEffect(() => {
@@ -19,9 +19,9 @@ function Projeto1({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) 
 
   return (
     <div className="App">
-      <HelmetProvider>
+      <Helmet>
         <title>{isPortuguese ? "Projeto 1 - Ribeiro DevStudio" : "Project 1 - Ribeiro DevStudio"}</title>
-      </HelmetProvider>
+      </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner images="/images/ti-portfolio.jpg" alt="imagem futurista TI" title={isPortuguese ? "Projeto 1" : "Project 1"} subtitle={isPortuguese ? "Aplicativo Web em SPA." : "Web Application in SPA."} />
       <Breadcrumb path={breadcrumbPath} isPortuguese={isPortuguese} />

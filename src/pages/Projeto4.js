@@ -3,7 +3,7 @@ import Header from '../Header';
 import Banner from '../components/Banner';
 import Breadcrumb from '../components/Breadcrumb';
 import ProjectBanner from '../components/ProjectBanner';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import '../App.css';
 
 function Projeto4({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) {
@@ -19,9 +19,9 @@ function Projeto4({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) 
 
   return (
     <div className="App">
-      <HelmetProvider>
+      <Helmet>
         <title>{isPortuguese ? "Projeto 4 - Ribeiro DevStudio" : "Project 4 - Ribeiro DevStudio"}</title>
-      </HelmetProvider>
+      </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner image="/images/ti-portfolio.jpg" alt="imagem futurista TI" title={isPortuguese ? "Projeto 4" : "Project 4"} subtitle={isPortuguese ? "Apresentação em PowerPoint da empresa ANG Engenharia." : "PowerPoint Presentation for ANG Engenharia company."} />
       <Breadcrumb path={breadcrumbPath} isPortuguese={isPortuguese} />

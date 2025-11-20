@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import Banner from '../components/Banner';
 import Section from '../components/Section';
@@ -47,21 +47,9 @@ function Home({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) {
 
   return (
     <div className="App">
-      <HelmetProvider>
-        <title>{isPortuguese ? "Ribeiro DevStudio - Desenvolvimento Web e Software" : "Ribeiro DevStudio - Web Development and Software"}</title>
-        <meta name="description" content={isPortuguese ? "Desenvolvimento de sites, aplicações web e software personalizados. Especialista em React, Node.js e tecnologias modernas. Certificações profissionais em desenvolvimento front-end e back-end." : "Custom website, web application and software development. Expert in React, Node.js and modern technologies. Professional certifications in front-end and back-end development."} />
-        <meta name="keywords" content={isPortuguese ? "desenvolvimento web, React, Node.js, software, certificações, Meta, Coursera, Universidade Santa Cecília" : "web development, React, Node.js, software, certifications, Meta, Coursera, Universidade Santa Cecília"} />
-        <meta property="og:title" content={isPortuguese ? "Ribeiro DevStudio - Desenvolvimento Web e Software" : "Ribeiro DevStudio - Web Development and Software"} />
-        <meta property="og:description" content={isPortuguese ? "Desenvolvimento de sites e aplicações web personalizados com tecnologias modernas." : "Custom website and web application development with modern technologies."} />
-        <meta property="og:image" content="/images/newyork-home.jpeg" />
-        <meta property="og:url" content="https://ribeirodevstudio.com" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={isPortuguese ? "Ribeiro DevStudio - Desenvolvimento Web e Software" : "Ribeiro DevStudio - Web Development and Software"} />
-        <meta name="twitter:description" content={isPortuguese ? "Desenvolvimento de sites e aplicações web personalizados com tecnologias modernas." : "Custom website and web application development with modern technologies."} />
-        <meta name="twitter:image" content="/images/newyork-home.jpeg" />
-        <link rel="canonical" href="https://ribeirodevstudio.com" />
-      </HelmetProvider>
+      <Helmet>
+        <title>{isPortuguese ? "Ribeiro DevStudio - Desenvolvimento Web e Software" : "Ribeiro DevStudio - Web and Software Development"}</title>
+      </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner images="/images/newyork-home.jpeg" alt="Imagem de prédio de New York." title={isPortuguese ? "Bem-vindo" : "Welcome"} subtitle={isPortuguese ? "Conheça nossos serviços." : "Discover our services."} />
       <main className="main-content">

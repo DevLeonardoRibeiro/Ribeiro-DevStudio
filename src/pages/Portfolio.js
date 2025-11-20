@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header';
 import Banner from '../components/Banner';
@@ -74,9 +74,9 @@ function Portfolio({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese })
 
   return (
     <div className="App">
-      <HelmetProvider>
+      <Helmet>
         <title>{isPortuguese ? "Portfolio - Ribeiro DevStudio" : "Portfolio - Ribeiro DevStudio"}</title>
-      </HelmetProvider>
+      </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner images="/images/data-portfolio.avif" alt="Imagem de um servidor" title={isPortuguese ? "Portfolio" : "Portfolio"} subtitle={isPortuguese ? "Veja nossos trabalhos." : "See our work."} />
       <Breadcrumb path={breadcrumbPath} isPortuguese={isPortuguese} />

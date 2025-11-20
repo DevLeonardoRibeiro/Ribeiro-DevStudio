@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import Banner from '../components/Banner';
 import Breadcrumb from '../components/Breadcrumb';
@@ -74,21 +74,9 @@ function Orcamento({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese })
 
   return (
     <div className="App">
-      <HelmetProvider>
+      <Helmet>
         <title>{isPortuguese ? "Orçamento - Ribeiro DevStudio" : "Quote - Ribeiro DevStudio"}</title>
-        <meta name="description" content={isPortuguese ? "Solicite um orçamento personalizado para desenvolvimento web, aplicações React, sites institucionais e soluções digitais. Entre em contato conosco." : "Request a custom quote for web development, React applications, institutional websites and digital solutions. Contact us."} />
-        <meta name="keywords" content={isPortuguese ? "orçamento, cotação, desenvolvimento web, React, sites, aplicações, contato, Ribeiro DevStudio" : "quote, quotation, web development, React, websites, applications, contact, Ribeiro DevStudio"} />
-        <meta property="og:title" content={isPortuguese ? "Orçamento - Ribeiro DevStudio" : "Quote - Ribeiro DevStudio"} />
-        <meta property="og:description" content={isPortuguese ? "Solicite um orçamento para seus projetos digitais." : "Request a quote for your digital projects."} />
-        <meta property="og:image" content="/images/contas-orcamento.webp" />
-        <meta property="og:url" content="https://ribeirodevstudio.com/orcamento" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={isPortuguese ? "Orçamento - Ribeiro DevStudio" : "Quote - Ribeiro DevStudio"} />
-        <meta name="twitter:description" content={isPortuguese ? "Solicite um orçamento para seus projetos digitais." : "Request a quote for your digital projects."} />
-        <meta name="twitter:image" content="/images/contas-orcamento.webp" />
-        <link rel="canonical" href="https://ribeirodevstudio.com/orcamento" />
-      </HelmetProvider>
+      </Helmet>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isPortuguese={isPortuguese} setIsPortuguese={setIsPortuguese} />
       <Banner images="/images/contas-orcamento.webp" alt="Imagem tecnologia de dados" title={isPortuguese ? "Orçamento" : "Quote"} subtitle={isPortuguese ? "Solicite um orçamento conosco." : "Request a quote with us."} />
       <Breadcrumb path={breadcrumbPath} isPortuguese={isPortuguese} />
