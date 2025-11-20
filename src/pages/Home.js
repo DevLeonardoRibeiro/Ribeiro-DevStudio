@@ -76,12 +76,12 @@ function Home({ isDarkMode, setIsDarkMode, isPortuguese, setIsPortuguese }) {
               <p className="tech-card-description">{isPortuguese ? "Diploma emitido pela Universidade Santa Cecília de 700 horas estudadas nas áreas de Desenvolvimento Web e Engenharia de Software" : "Diploma issued by Universidade Santa Cecília with 700 hours studied in Web Development and Software Engineering areas."}</p>
             </div>
             <div className="tech-card">
-              <h3 className="tech-card-title">{isPortuguese ? "Certicado Profissional em Desenvolvimento Front-End pela Meta by Coursera" : "Professional Certificate in Front-End Development by Meta by Coursera"}</h3>
-              <p className="tech-card-description">{isPortuguese ? "Certificado em Desenvolvimento Front-End em Técnologia React, emitido pela Meta by Coursera." : "Certificate in Front-End Development in React Technology, issued by Meta by Coursera."}</p>
+              <h3 className="tech-card-title">{isPortuguese ? "Certicado Profissional em Desenvolvimento Front-End pela Meta" : "Professional Certificate in Front-End Development by Meta."}</h3>
+              <p className="tech-card-description">{isPortuguese ? "Certificado em Desenvolvimento Front-End em Técnologia React, emitido pela Meta." : "Certificate in Front-End Development in React Technology, issued by Meta."}</p>
             </div>
             <div className="tech-card">
-              <h3 className="tech-card-title">{isPortuguese ? "Especialização em React pela Meta by Coursera" : "React Specialization by Meta"}</h3>
-              <p className="tech-card-description">{isPortuguese ? "Certificado em Especialização em React, emitido pela Meta by Coursera." : "Certificate in React Specialization, issued by Meta by Coursera."}</p>
+              <h3 className="tech-card-title">{isPortuguese ? "Especialização em React pela Meta" : "React Specialization by Meta"}</h3>
+              <p className="tech-card-description">{isPortuguese ? "Certificado em Especialização em React, emitido pela Meta." : "Certificate in React Specialization, issued by Meta."}</p>
             </div>
           </div>
         </Section>
