@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import TechCard from './TechCard';
 
 const TechCarousel = ({ technologies }) => {
@@ -7,11 +7,11 @@ const TechCarousel = ({ technologies }) => {
   const touchEndX = useRef(0);
   const intervalRef = useRef(null);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === technologies.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [technologies.length]);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -54,7 +54,7 @@ const TechCarousel = ({ technologies }) => {
         clearInterval(intervalRef.current);
       }
     };
-  }, []);
+  }, [nextSlide]);
 
   const handleIndicatorClick = (index) => {
     setCurrentIndex(index);
